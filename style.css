@@ -26,35 +26,44 @@ main {
     padding: 10px;
     border-radius: 12px;
     width: 100%;
-    max-width: 300px;
-    min-height: 200px;
+    max-width: 500px;
+    min-height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 4%;
 }
 
-.quiz {
+.content {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 10px;
+    gap: 30px;
 }
 
-.quantidade {
+.spnQtd {
+    font-size: 28px;
     text-align: end;
 }
 
-.respostas {
+.question {
+    font-size: 25px;
+}
+
+.answers {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 15px;
+    padding: 0 40px;
 }
 
 button {
+    
     width: 100%;
     padding: 5px;
     border: none;
     border-radius: 5px;
+    font-size: 24px;
     cursor: pointer;
     background-color: #0070a4;
     color: white;
