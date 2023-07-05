@@ -15,8 +15,8 @@ btnRestart.onclick = () => {
   content.style.display = "flex";
   contentFinish.style.display = "none";
 
-  currentIndex = 0;
-  questionsCorrect = 0;
+  indexAtual = 0;
+  acertos = 0;
   loadQuestion();
 };
 
@@ -35,14 +35,14 @@ function nextQuestion(e) {
 }
 
 function finish() {
-  textFinish.innerHTML = `Você acertou ${questionsCorrect} de ${questions.length}`;
+  textFinish.innerHTML = `Você acertou ${acertos} de ${questions.length}`;
   content.style.display = "none";
   contentFinish.style.display = "flex";
 }
 
 function loadQuestion() {
-  spnQtd.innerHTML = `${currentIndex + 1}/${questions.length}`;
-  const item = questions[currentIndex];
+  spnQtd.innerHTML = `${indexAtual + 1}/${questions.length}`;
+  const item = questions[indexAtual];
   answers.innerHTML = "";
   question.innerHTML = item.question;
 
