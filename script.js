@@ -9,14 +9,16 @@ const btnRestart = document.querySelector(".finish button");
 const feedbackContent = document.querySelector(".feedback");
 const choiceContent = document.querySelector(".choice");
 
-const geografia = document.querySelector(".geografia");
+const geografia = document.querySelector(".escolha");
 
 import questions from "./questions.js";
+import questions2 from "./questions2.js";
 
 let indexAtual = 0;
 let acertos = 0;
 let feedback = [];
 let feedback2 = [];
+let perguntas= [];
 
 btnRestart.onclick = () => {
   content.classList.toggle('content-off');
@@ -24,6 +26,7 @@ btnRestart.onclick = () => {
   feedback = [];
   feedback2 = [];
   feedbackContent.innerHTML = "";
+  
   indexAtual = 0;
   acertos = 0;
   loadQuestion();
@@ -38,7 +41,7 @@ function nextQuestion(e) {
     feedback.push(false);
   }
 
-  if (indexAtual < questions.length - 1) {
+  if (indexAtual < perguntas.length - 1) {
     indexAtual++;
     loadQuestion();
   } else {
@@ -48,10 +51,10 @@ function nextQuestion(e) {
 
 function finalizar() {
   
-  textFinish.innerHTML = `Você acertou ${acertos} de ${questions.length}`;
+  textFinish.innerHTML = `Você acertou ${acertos} de ${perguntas.length}`;
 
-  for(let i =0; i < questions.length; i++) {
-    console.log(feedback[i] + " " + feedback2[i]);
+  for(let i =0; i < perguntas.length; i++) {
+    
     if(feedback[i] === true) {
       feedbackContent.innerHTML += `<p class ="green"> ${i+1}. ${feedback2[i]} </p>`;
     } else {
@@ -66,10 +69,8 @@ function finalizar() {
 
 function loadQuestion() {
   
-
-
-  spnQtd.innerHTML = `${indexAtual + 1}/${questions.length}`;
-  const item = questions[indexAtual];
+  spnQtd.innerHTML = `${indexAtual + 1}/${perguntas.length}`;
+  const item = perguntas[indexAtual];
     answers.innerHTML = "";
     feedback2.push(item.question);
   question.innerHTML = item.question;
@@ -92,11 +93,29 @@ function loadQuestion() {
   });
 }
 
-geografia.addEventListener("click", start);
 
-function start() {
+document.querySelectorAll(".escolha").forEach((item) => {
+  item.addEventListener("click", () => start(item));
+  
+});
+
+
+function start(item) {
+  let selecionado = item.textContent;
+
+  if(selecionado === ' Geografia ') {
+    perguntas = questions;
+    console.log(perguntas);
+  } else if(selecionado === ' História ') {
+    perguntas = questions2;
+  } else {
+
+  }
   content.classList.toggle('content-off');
   choiceContent.classList.toggle('choice-off');
+
+
+
   loadQuestion();
 }
 
