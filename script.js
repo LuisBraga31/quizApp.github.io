@@ -8,8 +8,8 @@ const btnRestart = document.querySelector(".finish button");
 
 import questions from "./questions.js";
 
-let currentIndex = 0;
-let questionsCorrect = 0;
+let indexAtual = 0;
+let acertos = 0;
 
 btnRestart.onclick = () => {
   content.style.display = "flex";
@@ -21,12 +21,13 @@ btnRestart.onclick = () => {
 };
 
 function nextQuestion(e) {
-  if (e.target.getAttribute("data-correct") === "true") {
-    questionsCorrect++;
+  
+  if (e.target.getAttribute("data-correct")) {
+    acertos++;
   }
 
-  if (currentIndex < questions.length - 1) {
-    currentIndex++;
+  if (indexAtual < questions.length - 1) {
+    indexAtual++;
     loadQuestion();
   } else {
     finish();

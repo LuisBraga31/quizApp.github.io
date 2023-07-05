@@ -2,9 +2,9 @@ export default [
     {
       question: "Quantos países tem na África?",
       answers: [
-        { option: "54", correto: true },
-        { option: "48", correto: false },
-        { option: "45", correto: false },
+        { option: "54", correct: true },
+        { option: "48", correct: false },
+        { option: "45", correct: false },
       ],
     },
     {
