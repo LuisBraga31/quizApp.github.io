@@ -41,6 +41,10 @@ main {
     gap: 30px;
 }
 
+.content-off {
+    display: none;
+}
+
 .spnQtd {
     font-size: 28px;
     text-align: end;
@@ -57,8 +61,7 @@ main {
     padding: 0 40px;
 }
 
-button {
-    
+button { 
     width: 100%;
     padding: 5px;
     border: none;
@@ -67,14 +70,35 @@ button {
     cursor: pointer;
     background-color: #0070a4;
     color: white;
-  }
+}
+
+button:hover {
+    opacity: 80%;
+}
   
-  .finish {
+.finish {
     display: none;
     flex-direction: column;
     gap: 10px;
-  }
+}
   
-  .finish button {
+.finish-on {
+    display: flex;
+}
+
+.finish button {
     text-align: center;
-  }
+}
+
+.feedback {
+    display: flex;
+    flex-direction: column;
+}
+
+.green {
+    color: green;
+}
+
+.red {
+    color: red;
+}
