@@ -7,6 +7,9 @@ const contentFinish = document.querySelector(".finish");
 const btnRestart = document.querySelector(".finish button");
 
 const feedbackContent = document.querySelector(".feedback");
+const choiceContent = document.querySelector(".choice");
+
+const geografia = document.querySelector(".geografia");
 
 import questions from "./questions.js";
 
@@ -44,23 +47,17 @@ function nextQuestion(e) {
 }
 
 function finalizar() {
+  
   textFinish.innerHTML = `Você acertou ${acertos} de ${questions.length}`;
 
-  console.log(feedback);
-  console.log(feedback2);
-
-  for(let i =0; i < 4; i++) {
+  for(let i =0; i < questions.length; i++) {
     console.log(feedback[i] + " " + feedback2[i]);
     if(feedback[i] === true) {
       feedbackContent.innerHTML += `<p class ="green"> ${i+1}. ${feedback2[i]} </p>`;
     } else {
       feedbackContent.innerHTML += `<p class ="red"> ${i+1}. ${feedback2[i]} </p>`;
     }
-    
-    
   }
-  
-  console.log(feedbackContent);
 
   content.classList.toggle('content-off');
   contentFinish.classList.toggle('finish-on');
@@ -68,10 +65,13 @@ function finalizar() {
 }
 
 function loadQuestion() {
+  
+
+
   spnQtd.innerHTML = `${indexAtual + 1}/${questions.length}`;
   const item = questions[indexAtual];
-  answers.innerHTML = "";
-  feedback2.push(item.question);
+    answers.innerHTML = "";
+    feedback2.push(item.question);
   question.innerHTML = item.question;
   
 
@@ -92,4 +92,11 @@ function loadQuestion() {
   });
 }
 
-loadQuestion();
+geografia.addEventListener("click", start);
+
+function start() {
+  content.classList.toggle('content-off');
+  choiceContent.classList.toggle('choice-off');
+  loadQuestion();
+}
+
