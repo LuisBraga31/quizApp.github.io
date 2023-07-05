@@ -9,7 +9,7 @@ const btnRestart = document.querySelector(".finish button");
 const feedbackContent = document.querySelector(".feedback");
 const choiceContent = document.querySelector(".choice");
 
-const geografia = document.querySelector(".escolha");
+const backMenu = document.querySelector(".voltar");
 
 import questions from "./questions.js";
 import questions2 from "./questions2.js";
@@ -19,6 +19,24 @@ let acertos = 0;
 let feedback = [];
 let feedback2 = [];
 let perguntas= [];
+
+
+document.querySelectorAll(".escolha").forEach((item) => {
+  item.addEventListener("click", () => start(item));  
+});
+
+function menu() {
+  contentFinish.classList.toggle('finish-on');
+  choiceContent.classList.toggle('choice-off');
+  perguntas= [];
+  feedback = [];
+  feedback2 = [];
+  feedbackContent.innerHTML = "";
+  indexAtual = 0;
+  acertos = 0;
+}
+
+backMenu.addEventListener("click", menu);
 
 btnRestart.onclick = () => {
   content.classList.toggle('content-off');
@@ -93,19 +111,12 @@ function loadQuestion() {
   });
 }
 
-
-document.querySelectorAll(".escolha").forEach((item) => {
-  item.addEventListener("click", () => start(item));
-  
-});
-
-
 function start(item) {
   let selecionado = item.textContent;
 
   if(selecionado === ' Geografia ') {
     perguntas = questions;
-    console.log(perguntas);
+
   } else if(selecionado === ' História ') {
     perguntas = questions2;
   } else {
@@ -113,8 +124,6 @@ function start(item) {
   }
   content.classList.toggle('content-off');
   choiceContent.classList.toggle('choice-off');
-
-
 
   loadQuestion();
 }
