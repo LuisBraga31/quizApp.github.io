@@ -133,7 +133,7 @@ function start(item) {
   } else if(selecionado === ' História ') {
     
     for(let i = 0; i < questions.length; i++) {
-      if(questions[i].tag === 'Geografia') {
+      if(questions[i].tag === 'História') {
         perguntas.push(questions[i]);
       }
     }
