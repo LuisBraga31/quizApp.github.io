@@ -92,6 +92,10 @@ function loadQuestion() {
     tag.classList.add('gg-fundo');
   } else if(perguntas[indexAtual].tag === 'História') {
     tag.classList.add('ht-fundo');
+  } else if(perguntas[indexAtual].tag === 'Matemática') {
+    tag.classList.add('mt-fundo');
+  } else if(perguntas[indexAtual].tag === 'Biologia') {
+    tag.classList.add('bg-fundo');
   }
   
   spnQtd.innerHTML = `${indexAtual + 1}/${perguntas.length}`;
@@ -138,9 +142,22 @@ function start(item) {
       }
     }
 
-  } else {
-
+  } else if(selecionado === ' Matemática ') {
+    
+    for(let i = 0; i < questions.length; i++) {
+      if(questions[i].tag === 'Matemática') {
+        perguntas.push(questions[i]);
+      }
+    }
+  } else if(selecionado === ' Biologia ') {
+    
+    for(let i = 0; i < questions.length; i++) {
+      if(questions[i].tag === 'Biologia') {
+        perguntas.push(questions[i]);
+      }
+    }
   }
+
   content.classList.toggle('content-off');
   choiceContent.classList.toggle('choice-off');
 

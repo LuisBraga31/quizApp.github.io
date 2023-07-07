@@ -48,6 +48,8 @@ main {
 .choice {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     gap: 50px;
     align-items: center;
 }
@@ -75,6 +77,14 @@ main {
 
 .historia {
     background-color: #F7C942;
+}
+
+.matematica {
+    background-color: #5cb8ff;
+}
+
+.biologia {
+    background-color: #70ff63;
 }
 
 .choice-off {
@@ -141,6 +151,14 @@ button:hover {
 
 .ht-fundo {
     background-color: #F7C942;
+}
+
+.mt-fundo {
+    background-color: #5cb8ff;
+}
+
+.bg-fundo {
+    background-color: #70ff63;
 }
 
 /* 3. CONTENT - FEEDBACK */
