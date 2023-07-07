@@ -1,5 +1,6 @@
 export default [
     {
+      tag: "História",
       question: "Com quantos anos D. Pedro II assumiu o trono do Brasil ?",
       answers: [
         { option: "12", correct: false },
@@ -8,6 +9,7 @@ export default [
       ],
     },
     {
+      tag: "História",
       question: "Em que país surgiu a primeira revolução industrial ?",
       answers: [
         { option: "União Soviética", correct: false },
@@ -16,6 +18,7 @@ export default [
       ],
     },
     {
+      tag: "História",
       question: "Qual foi a primeira capital do Brasil ?",
       answers: [
         { option: "São Luís", correct: false },
@@ -24,6 +27,7 @@ export default [
       ],
     },
     {
+      tag: "História",
       question: "Quem foi o primeiro presidente do Brasil?",
       answers: [
         { option: "Deodoro da Fonseca", correct: true },

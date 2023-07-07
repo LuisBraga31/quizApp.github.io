@@ -1,5 +1,6 @@
 export default [
     {
+      tag: "Geografia",
       question: "Quantos países tem na África?",
       answers: [
         { option: "54", correct: true },
@@ -8,6 +9,7 @@ export default [
       ],
     },
     {
+      tag: "Geografia",
       question: "Qual a capital do Equador?",
       answers: [
         { option: "Medellin", correct: false },
@@ -16,6 +18,7 @@ export default [
       ],
     },
     {
+      tag: "Geografia",
       question: "Qual é o 4 país mais populoso do mundo?",
       answers: [
         { option: "Indonésia", correct: true },
@@ -24,6 +27,7 @@ export default [
       ],
     },
     {
+      tag: "Geografia",
       question: "Qual a capital da Austrália?",
       answers: [
         { option: "Melbourne", correct: false },

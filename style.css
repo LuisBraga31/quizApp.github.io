@@ -5,6 +5,7 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+/* CORPO */
 body {
     background-image: url('./imgs/fundo.jpg');
     background-size: cover;
@@ -18,8 +19,16 @@ body {
 }
 
 body h1 {
-    color: white;
+    width: 25%;
+    text-align: center;
+    background-color: #ffffff;
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: black;
+
 }
+
+/* MAIN */
 
 main {
     background-color: white;
@@ -34,30 +43,51 @@ main {
     margin-bottom: 4%;
 }
 
+/* 1. CONTENT - ESCOLHA */
+
 .choice {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     gap: 50px;
     align-items: center;
 }
 
 .choice span {
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    width: 150px;
     text-align: center;
     border: 1px solid black;
-    padding: 10px;
+    padding: 10px 20px;
     cursor: pointer;
+    font-weight: bold;
+    color: black;
+    transition: 0.2s;
+}
+
+.choice span:hover {
+    transform: scale(1.1);
+}
+
+.geografia {
+    background-color: #9a5833;
+}
+
+.historia {
+    background-color: #F7C942;
 }
 
 .choice-off {
     display: none;
 }
 
+/* 2. CONTENT - JOGO */
+
 .content {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 30px;
+    gap: 10px;
 }
 
 .content-off {
@@ -65,12 +95,14 @@ main {
 }
 
 .spnQtd {
-    font-size: 28px;
+    font-size: 24px;
     text-align: end;
+    margin-right: 5px;
 }
 
 .question {
     font-size: 22px;
+    margin-bottom: 20px;
 }
 
 .answers {
@@ -94,6 +126,24 @@ main {
 button:hover {
     opacity: 80%;
 }
+
+.tag {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+    padding: 3px 4px;
+    border-radius: 15px;
+}
+
+.gg-fundo {
+    background-color: #9a5833;
+}
+
+.ht-fundo {
+    background-color: #F7C942;
+}
+
+/* 3. CONTENT - FEEDBACK */
   
 .finish {
     display: none;

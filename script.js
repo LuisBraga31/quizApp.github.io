@@ -1,5 +1,6 @@
 const question = document.querySelector(".question");
 const answers = document.querySelector(".answers");
+const tag = document.querySelector(".tag");
 const spnQtd = document.querySelector(".spnQtd");
 const textFinish = document.querySelector(".finish span");
 const content = document.querySelector(".content");
@@ -87,10 +88,18 @@ function finalizar() {
 
 function loadQuestion() {
   
+  tag.innerHTML = perguntas[indexAtual].tag;
+  if(perguntas[indexAtual].tag === 'Geografia') {
+    tag.classList.add('gg-fundo');
+  } else if(perguntas[indexAtual].tag === 'História') {
+    tag.classList.add('ht-fundo');
+  }
+  
   spnQtd.innerHTML = `${indexAtual + 1}/${perguntas.length}`;
+  
   const item = perguntas[indexAtual];
-    answers.innerHTML = "";
-    feedback2.push(item.question);
+  answers.innerHTML = "";
+  feedback2.push(item.question);
   question.innerHTML = item.question;
   
 
