@@ -13,7 +13,6 @@ const choiceContent = document.querySelector(".choice");
 const backMenu = document.querySelector(".voltar");
 
 import questions from "./questions.js";
-import questions2 from "./questions2.js";
 
 let indexAtual = 0;
 let acertos = 0;
@@ -124,10 +123,21 @@ function start(item) {
   let selecionado = item.textContent;
 
   if(selecionado === ' Geografia ') {
-    perguntas = questions;
+    
+    for(let i = 0; i < questions.length; i++) {
+      if(questions[i].tag === 'Geografia') {
+        perguntas.push(questions[i]);
+      }
+    }
 
   } else if(selecionado === ' História ') {
-    perguntas = questions2;
+    
+    for(let i = 0; i < questions.length; i++) {
+      if(questions[i].tag === 'Geografia') {
+        perguntas.push(questions[i]);
+      }
+    }
+
   } else {
 
   }
