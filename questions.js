@@ -102,9 +102,9 @@ export default [
       tag: "Matemática",
       question: "53 dividido por quatro mais 5 é igual a quanto?",
       answers: [
-        { option: "13", correct: false },
-        { option: "18", correct: true },
-        { option: "17", correct: false },
+        { option: "13.25", correct: false },
+        { option: "18.25", correct: true },
+        { option: "17.75", correct: false },
       ],
     },
     {

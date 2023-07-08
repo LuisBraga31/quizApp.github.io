@@ -89,13 +89,13 @@ function loadQuestion() {
   
   tag.innerHTML = perguntas[indexAtual].tag;
   if(perguntas[indexAtual].tag === 'Geografia') {
-    tag.classList.add('gg-fundo');
+    tag.style.backgroundColor = '#9a5833';
   } else if(perguntas[indexAtual].tag === 'História') {
-    tag.classList.add('ht-fundo');
+    tag.style.backgroundColor = '#F7C942';
   } else if(perguntas[indexAtual].tag === 'Matemática') {
-    tag.classList.add('mt-fundo');
+    tag.style.backgroundColor = '#5cb8ff';
   } else if(perguntas[indexAtual].tag === 'Biologia') {
-    tag.classList.add('bg-fundo');
+    tag.style.backgroundColor = '#70ff63';
   }
   
   spnQtd.innerHTML = `${indexAtual + 1}/${perguntas.length}`;
