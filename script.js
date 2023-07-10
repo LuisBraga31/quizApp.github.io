@@ -12,6 +12,8 @@ const choiceContent = document.querySelector(".choice");
 
 const backMenu = document.querySelector(".voltar");
 
+const body = document.querySelector("body");
+
 import questions from "./questions.js";
 
 let indexAtual = 0;
@@ -19,7 +21,6 @@ let acertos = 0;
 let feedback = [];
 let feedback2 = [];
 let perguntas= [];
-
 
 document.querySelectorAll(".escolha").forEach((item) => {
   item.addEventListener("click", () => start(item));  
@@ -63,12 +64,37 @@ function nextQuestion(e) {
     indexAtual++;
     loadQuestion();
   } else {
-    finalizar();
+    finalizar(e);
   }
 }
 
-function finalizar() {
+function finalizar(ev) {
+  ev.preventDefault();
+  let url = '';
+  if(acertos === 0) {
+    url = 'https://www.maxieduca.com.br/blog/wp-content/uploads/2017/10/Nota-Zero.jpg';
+  } else if(acertos === 1) {
+    url = 'https://extra.globo.com/incoming/25209387-3f4-847/w640h360-PROP/meme-chloe.png';
+  } else if(acertos === 2) {
+    url = 'https://pm1.aminoapps.com/6389/9c28e4faffa7fc8556b19863a3f2bbab507a1cab_hq.jpg';
+  } else if(acertos === 3) {
+    url = 'https://ichef.bbci.co.uk/news/640/amz/worldservice/live/assets/images/2015/04/15/150415162940_success_kid_624x351_arquivopessoal.jpg';
+  } else if(acertos === 4) {
+    url = 'https://media.tenor.com/53mmUaqb1b0AAAAC/copa-torcedor.gif';
+  }
   
+  Swal.fire({
+    title: 'Jogo Finalizado!',
+    text: `Você acertou ${acertos} de ${perguntas.length}`,
+    imageUrl: `${url}`,
+    imageWidth: 400,
+    imageHeight: 200,
+    imageAlt: 'Custom image',
+    confirmButtonText: 'Ver feedback',
+    confirmButtonColor: 'green'
+  })
+
+  body.classList.remove("swal2-height-auto");
   textFinish.innerHTML = `Você acertou ${acertos} de ${perguntas.length}`;
 
   for(let i =0; i < perguntas.length; i++) {
@@ -124,6 +150,7 @@ function loadQuestion() {
 }
 
 function start(item) {
+
   let selecionado = item.textContent;
 
   if(selecionado === ' Geografia ') {
@@ -163,4 +190,3 @@ function start(item) {
 
   loadQuestion();
 }
-
