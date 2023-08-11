@@ -14,6 +14,7 @@ const backMenu = document.querySelector(".voltar");
 
 const body = document.querySelector("body");
 
+// Importando questões
 import questions from "./questions.js";
 
 let indexAtual = 0;
@@ -22,6 +23,7 @@ let feedback = [];
 let feedback2 = [];
 let perguntas= [];
 
+// Iniciando a aplicação selecionando um tema
 document.querySelectorAll(".escolha").forEach((item) => {
   item.addEventListener("click", () => start(item));  
 });
@@ -51,6 +53,7 @@ btnRestart.onclick = () => {
   loadQuestion();
 };
 
+// Carregar proxima pergunta
 function nextQuestion(e) {
   
   if (e.target.getAttribute("data-correct") === "true") {
@@ -68,6 +71,7 @@ function nextQuestion(e) {
   }
 }
 
+// Carregar tela de finalização
 function finalizar(ev) {
   ev.preventDefault();
   let url = '';
@@ -111,18 +115,11 @@ function finalizar(ev) {
 
 }
 
+// Carregando pergunta ao jogador
 function loadQuestion() {
   
   tag.innerHTML = perguntas[indexAtual].tag;
-  if(perguntas[indexAtual].tag === 'Geografia') {
-    tag.style.backgroundColor = '#9a5833';
-  } else if(perguntas[indexAtual].tag === 'História') {
-    tag.style.backgroundColor = '#F7C942';
-  } else if(perguntas[indexAtual].tag === 'Matemática') {
-    tag.style.backgroundColor = '#5cb8ff';
-  } else if(perguntas[indexAtual].tag === 'Biologia') {
-    tag.style.backgroundColor = '#70ff63';
-  }
+
   
   spnQtd.innerHTML = `${indexAtual + 1}/${perguntas.length}`;
   
@@ -149,6 +146,8 @@ function loadQuestion() {
   });
 }
 
+
+// Carregando as perguntas do tema escolhido
 function start(item) {
 
   let selecionado = item.textContent;
@@ -158,6 +157,7 @@ function start(item) {
     for(let i = 0; i < questions.length; i++) {
       if(questions[i].tag === 'Geografia') {
         perguntas.push(questions[i]);
+        tag.style.backgroundColor = '#9a5833';
       }
     }
 
@@ -166,6 +166,7 @@ function start(item) {
     for(let i = 0; i < questions.length; i++) {
       if(questions[i].tag === 'História') {
         perguntas.push(questions[i]);
+        tag.style.backgroundColor = '#F7C942';
       }
     }
 
@@ -174,6 +175,7 @@ function start(item) {
     for(let i = 0; i < questions.length; i++) {
       if(questions[i].tag === 'Matemática') {
         perguntas.push(questions[i]);
+        tag.style.backgroundColor = '#5cb8ff';
       }
     }
   } else if(selecionado === ' Biologia ') {
@@ -181,6 +183,7 @@ function start(item) {
     for(let i = 0; i < questions.length; i++) {
       if(questions[i].tag === 'Biologia') {
         perguntas.push(questions[i]);
+        tag.style.backgroundColor = '#70ff63';
       }
     }
   }
