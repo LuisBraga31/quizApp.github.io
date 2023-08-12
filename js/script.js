@@ -13,6 +13,7 @@ const choiceContent = document.querySelector(".choice");
 const backMenu = document.querySelector(".voltar");
 
 const body = document.querySelector("body");
+const main = document.querySelector("main");
 
 // Importando questões
 import questions from "./questions.js";
@@ -31,6 +32,7 @@ document.querySelectorAll(".escolha").forEach((item) => {
 function menu() {
   contentFinish.classList.toggle('finish-on');
   choiceContent.classList.toggle('choice-off');
+  main.classList.toggle("quizContent");
   perguntas= [];
   feedback = [];
   feedback2 = [];
@@ -150,6 +152,7 @@ function loadQuestion() {
 // Carregando as perguntas do tema escolhido
 function start(item) {
 
+  main.classList.toggle("quizContent");
   let selecionado = item.textContent;
 
   if(selecionado === ' Geografia ') {
