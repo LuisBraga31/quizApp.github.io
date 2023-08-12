@@ -24,6 +24,7 @@ body {
 
 
 /* HEADER */
+
 header {
     width: 100%;
     background-color: #ffffff;
@@ -135,14 +136,16 @@ main {
     padding: 5px;
     border: none;
     border-radius: 5px;
-    font-size: 24px;
+    font-size: 20px;
     cursor: pointer;
-    background-color: #0070a4;
-    color: white;
+    background-color: #10b3ff;
+    color: black;
+    border: 1px solid black;
 }
 
 button:hover {
-    opacity: 80%;
+    background-color: #99dfff;
+    
 }
 
 .tag {
