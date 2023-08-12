@@ -189,6 +189,22 @@ function start(item) {
         tag.style.backgroundColor = '#70ff63';
       }
     }
+  } else if(selecionado === ' Química ') {
+    
+    for(let i = 0; i < questions.length; i++) {
+      if(questions[i].tag === 'Química') {
+        perguntas.push(questions[i]);
+        tag.style.backgroundColor = '#FF6633';
+      }
+    }
+  }else if(selecionado === ' Literatura ') {
+    
+    for(let i = 0; i < questions.length; i++) {
+      if(questions[i].tag === 'Literatura') {
+        perguntas.push(questions[i]);
+        tag.style.backgroundColor = '#ff6961';
+      }
+    }
   }
 
   content.classList.toggle('content-off');

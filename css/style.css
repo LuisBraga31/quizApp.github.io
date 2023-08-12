@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=REM&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'REM', sans-serif;
 }
 
 /* CORPO */
@@ -94,6 +96,14 @@ main {
 
 .biologia {
     background-color: #70ff63;
+}
+
+.quimica {
+    background-color: #FF6633;
+}
+
+.literatura {
+    background-color: #ff6961 ;
 }
 
 .choice-off {

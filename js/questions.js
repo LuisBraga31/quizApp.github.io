@@ -143,4 +143,77 @@ export default [
         { option: "AB+", correct: false },
       ],
     },
+    {
+      tag: "Literatura",
+      question: "A peça Romeu e Julieta se passa em que local ?",
+      answers: [
+        { option: "Itália", correct: true },
+        { option: "França", correct: false },
+        { option: "Escócia", correct: false },
+      ],
+    },
+    {
+      tag: "Literatura",
+      question: "Qual era o nome do namorado de Capitu no livro Dom Casmurro ?",
+      answers: [
+        { option: "Geninho", correct: false },
+        { option: "Bentinho", correct: true },
+        { option: "Hebert", correct: false },
+      ],
+    },
+    {
+      tag: "Literatura",
+      question: "Qual a maior obra de Machado de Assis ?",
+      answers: [
+        { option: "Memórias Póstumas de Brás Cubas", correct: true },
+        { option: "Dom Casmurro", correct: false },
+        { option: "A mão e a luva", correct: false },
+      ],
+    },
+    {
+      tag: "Literatura",
+      question: "Em que ano o museu da língua portuguesa pegou fogo ?",
+      answers: [
+        { option: "2016", correct: false },
+        { option: "2015", correct: true },
+        { option: "2014", correct: false },
+      ],
+    },
+    {
+      tag: "Química",
+      question: "A sigla Sn na tabela períodica representa qual elemento ?",
+      answers: [
+        { option: "Silício", correct: false },
+        { option: "Estanho", correct: true },
+        { option: "Estrôncio", correct: false },
+      ],
+    },
+    {
+      tag: "Química",
+      question: "Quem descobriu o átomo ?",
+      answers: [
+        { option: "Leucipo de Mileto", correct: false },
+        { option: "Michael Athom", correct: false },
+        { option: "John Dalton", correct: true },
+      ],
+    },
+    {
+      tag: "Química",
+      question: "Para que o carbono 14 é utilizado ?",
+      answers: [
+        { option: "Datação de fósseis", correct: true },
+        { option: "Datar esqueletos", correct: false },
+        { option: "Descobrir novos dinossauros", correct: false },
+      ],
+    },
+    {
+      tag: "Química",
+      question: "Qual a fórmula do Peróxido de hidrogênio ?",
+      answers: [
+        { option: "H3O2", correct: false },
+        { option: "HO2", correct: false },
+        { option: "H2O2", correct: true },
+      ],
+    }
+    
   ];
